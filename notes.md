@@ -28,4 +28,56 @@ task :console do
     Pry.start
 end
 
-6. 
+6.
+
+
+
+To fix, no database connection:
+- add database.yml file to config folder
+- erase this code from environment.db:
+ActiveRecord::Base.establish_connection(
+  :adapter => "sqlite3",
+  :database => "db/#{ENV['SINATRA_ENV']}.sqlite"
+)
+- add code below to database.yml:
+  development:
+  adapter: sqlite3
+  database: db/development.sqlite3
+
+  - do rake db:create to create the database
+
+  - don't want to commit the database to a git repo so do:
+    - create a .gitignore file in root directory 'touch .gitignore'
+    - with *.sqlite3 in it
+
+
+--------------------------------------------------------------------------------------
+PROJECT REQUIREMENT:
+
+Build an MVC Sinatra application.
+Use ActiveRecord with Sinatra.
+Use multiple models.
+Use at least one has_many relationship on a User model and one belongs_to relationship on another model.
+Must have user accounts - users must be able to sign up, sign in, and sign out.
+Validate uniqueness of user login attribute (username or email).
+Once logged in, a user must have the ability to create, read, update and destroy the resource that belongs_to user.
+Ensure that users can edit and delete only their own resources - not resources created by other users.
+Validate user input so bad data cannot be persisted to the database.
+BONUS: Display validation failures to user with error messages. (This is an optional feature, challenge yourself and give it a shot!)
+-------------------------------------------------------------------------------------------------------------------------------------------
+
+Notes on Project:
+- User has_many Standards and a Standard belongs to a User
+- A Resource has many Standards and a Standard has many Resources.
+
+- User attributes: name and email
+- Standards attributes: Title (name of standard), Resource (links to videos and assignments), Description (notes about standard for teacher)
+- Resource attributes are: standard, title, link
+
+User Stories:
+- Description of app: this is an app for Chem teachers to use to keep track of the standards that have to teach during the school year and videos/resources they an use to help teach students
+- User can register for site
+- User/teacher can log into and out of their account.
+- Goes to welcome page where they can see a list of all of their standards and resources. Will have a create standard button on the page and delete and update standard button under each standard.
+- Welcome site has a create a new standard button -> takes them to Add a Standard Page which is a form where they can add a Standard title, it's resources. User will hit submit button and it will redirect them to the welcome page with the new standard.
+- User can logout of site.
