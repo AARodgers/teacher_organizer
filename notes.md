@@ -64,6 +64,14 @@ Once logged in, a user must have the ability to create, read, update and destroy
 Ensure that users can edit and delete only their own resources - not resources created by other users.
 Validate user input so bad data cannot be persisted to the database.
 BONUS: Display validation failures to user with error messages. (This is an optional feature, challenge yourself and give it a shot!)
+
+1. List tools will use to allow user to signup, signin, signout:
+
+2. What attribute will you use for user login? How will you make sure it is unique between all users?
+
+3. Briefly describe how you will not allow users to delete or edit other users things.
+
+4. If you intend on showing validation failures, how? 
 -------------------------------------------------------------------------------------------------------------------------------------------
 
 Notes on Project:
