@@ -10,19 +10,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_04_220028) do
-
-  create_table "standards", force: :cascade do |t|
-    t.string "title"
-    t.string "description"
-    t.string "resource_id"
-    t.integer "user_id"
-  end
+ActiveRecord::Schema.define(version: 2020_09_07_231654) do
 
   create_table "users", force: :cascade do |t|
     t.string "name"
     t.string "email"
-    t.string "password_digest"
+    t.string "password"
   end
 
 end
