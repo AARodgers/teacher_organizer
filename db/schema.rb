@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_09_08_011942) do
+ActiveRecord::Schema.define(version: 2020_09_08_021754) do
+
+  create_table "resources", force: :cascade do |t|
+    t.string "title"
+    t.string "link"
+  end
+
+  create_table "standard_resources", force: :cascade do |t|
+    t.integer "standard_id"
+    t.integer "resource_id"
+  end
 
   create_table "standards", force: :cascade do |t|
     t.string "title"
