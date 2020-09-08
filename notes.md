@@ -71,7 +71,7 @@ BONUS: Display validation failures to user with error messages. (This is an opti
 
 3. Briefly describe how you will not allow users to delete or edit other users things.
 
-4. If you intend on showing validation failures, how? 
+4. If you intend on showing validation failures, how?
 -------------------------------------------------------------------------------------------------------------------------------------------
 
 Notes on Project:
@@ -79,7 +79,7 @@ Notes on Project:
 - A Resource has many Standards and a Standard has many Resources.
 
 - User attributes: name and email
-- Standards attributes: Title (name of standard), Resource (links to videos and assignments), Description (notes about standard for teacher)
+- Standards attributes: Title (name of standard), Resources (links to videos and assignments), Description (notes about standard for teacher)
 - Resource attributes are: standard, title, link
 
 User Stories:
