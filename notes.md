@@ -89,3 +89,18 @@ User Stories:
 - Goes to welcome page where they can see a list of all of their standards and resources. Will have a create standard button on the page and delete and update standard button under each standard.
 - Welcome site has a create a new standard button -> takes them to Add a Standard Page which is a form where they can add a Standard title, it's resources. User will hit submit button and it will redirect them to the welcome page with the new standard.
 - User can logout of site.
+
+
+-------------------------------------------
+Example seeding data:
+
+user1 = User.create(name: "bob", email: "bob@bob")
+user1.save ??
+
+standard1 = Standard.create(title: "somestandard1", description: "thermodynamics")
+
+?? do i need add the user?
+?? do i need to write it differently?
+ex. standard1 = Standard.create(:title => "somestandard",)
+
+

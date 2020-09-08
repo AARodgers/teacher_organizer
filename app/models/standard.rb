@@ -1,5 +1,8 @@
 class Standard < ActiveRecord::Base
-    belongs_to :user
     has_many :standard_resources
+    has_many :user_standards
     has_many :resources, through: :standard_resources
+    has_many :users, through: :user_standards
 end
+
+
