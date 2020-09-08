@@ -4,5 +4,3 @@ class Standard < ActiveRecord::Base
     has_many :resources, through: :standard_resources
     has_many :users, through: :user_standards
 end
-
-
