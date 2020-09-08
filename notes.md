@@ -106,3 +106,9 @@ resource1 = Resource.create(title: "1st Law of Thermodynamics", link: "www.khan.
 ?? do i need add the user? initially
 ?? do i need to write it differently?
 ex. standard1 = Standard.create(:title => "somestandard",)
+
+
+=========================
+Sqlite explorer TO SEE/VISUALIZ DATABASE:
+cmd shift p
+type: sqlite open database
