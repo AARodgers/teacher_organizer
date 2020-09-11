@@ -4,14 +4,13 @@ class SessionsController < ApplicationController
         erb :'sessions/login'
     end
 
-    # post '/sessions' do
-    #     login(params[:email], params[:password])
-    #     redirect '/????'
-    # end
-        #need to figure out where to redirect to and do login method
+    post '/sessions' do
+        login(params[:email], params[:password])
+        redirect '/homepage'
+    end
 
     get '/logout' do
         logout!
-        redirect '/???'
+        redirect '/login'
     end
 end

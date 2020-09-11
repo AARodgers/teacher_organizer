@@ -1,6 +1,6 @@
 class StandardsController < ApplicationController
 
-    get '/standards' do
-        "list of all standards"
+    get '/homepage' do
+        "teachers homepage"
     end
 end
