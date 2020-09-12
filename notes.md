@@ -112,3 +112,9 @@ ex. standard1 = Standard.create(:title => "somestandard",)
 Sqlite explorer TO SEE/VISUALIZ DATABASE:
 cmd shift p
 type: sqlite open database
+
+=======================================
+Seed Data Notes:
+id: 1, name: Teacher Bob, email: bob@internet_high_school.com, password: chemistryisawesome
+id: 2, name: Teacher Susan, email: chemteach@highschool.com, password: test   ?:(encrypted)
+id: 3, name: Teacher Alice, email: alice@highschool.com, password: inwonderland

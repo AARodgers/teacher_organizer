@@ -1,6 +1,6 @@
 class StandardsController < ApplicationController
 
     get '/homepage' do
-        "teachers homepage"
+        erb :'users/homepage'
     end
 end
