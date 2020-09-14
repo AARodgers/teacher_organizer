@@ -1,8 +1,10 @@
 <h1>Welcome <%= @user.name %> to the Teachers App!</h1>
 
-<form action='/signup' method='POST'>
-    <button type="submit">View Standards</button>
-</form>
+<ul>
+<% @standards.each do |standard|%>
+  <li><%= standard.title %></li>
+<% end %>
+</ul>
 
 <form action='/logout' method='POST'>
     <button type="submit">Log Out</button>
