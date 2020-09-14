@@ -1,7 +1,7 @@
 class UsersController < ApplicationController
 
   get '/teachersapp' do
-    erb :'users/homepage'
+    erb :'homepage'
   end
 
   get '/signup' do
@@ -15,7 +15,6 @@ class UsersController < ApplicationController
       @user = User.new(:name => params[:name], :email => params[:email], :password => params[:password])
       @user.save
       session[:user_id] = @user.id
-      erb :'users/new'
       redirect to '/homepage'
     end
   end

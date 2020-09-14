@@ -31,5 +31,6 @@ class ApplicationController < Sinatra::Base
 
         def logout!
             session.clear
+            redirect to '/teachersapp'
         end
 end

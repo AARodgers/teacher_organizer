@@ -118,3 +118,4 @@ Seed Data Notes:
 id: 1, name: Teacher Bob, email: bob@internet_high_school.com, password: chemistryisawesome
 id: 2, name: Teacher Susan, email: chemteach@highschool.com, password: test   ?:(encrypted)
 id: 3, name: Teacher Alice, email: alice@highschool.com, password: inwonderland
+id: 4, name: Teacher Matt, email: cara@highschool.com , password: hellcat
