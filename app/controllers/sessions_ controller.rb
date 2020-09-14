@@ -9,8 +9,8 @@ class SessionsController < ApplicationController
         redirect '/homepage'
     end
 
-    get '/logout' do
+    post '/logout' do
         logout!
-        redirect '/login'
+        redirect '/teachersapp'
     end
 end
