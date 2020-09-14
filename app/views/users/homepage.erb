@@ -1,4 +1,4 @@
-<h1>Welcome (insert current users name here) to the Teachers App!</h1>
+<h1>Welcome <%= @user.name %> to the Teachers App!</h1>
 
 <form action='/signup' method='POST'>
     <input type='submit' name='view_standards' value="View Standards">
