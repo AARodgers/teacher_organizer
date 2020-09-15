@@ -11,3 +11,4 @@ resource1 = Resource.create(
     link: "www.khanacademy_1st_law.com",
     standards: [standard1]
 )
+

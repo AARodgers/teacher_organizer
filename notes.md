@@ -150,3 +150,15 @@ resource2 = Resource.create(
     link: "https://www.youtube.com/watch?v=cfXzwh3KadE",
     standards: [standard2]
 )
+
+resource3 = Resource.create(
+    title: "Video for Ultra-violet rays and radiation",
+    link: "https://www.youtube.com/watch?v=QW5zeVy8aE0",
+    standards: [standard2]
+)
+
+resource4 = Resource.create(
+    title: "Alpha, Beta, Gamma Decay Article to read",
+    link: "https://www.khanacademy.org/science/in-in-class-12th-physics-india/nuclei/in-in-nuclear-physics/a/radioactive-decay-types-article",
+    standards: [standard2]
+)
