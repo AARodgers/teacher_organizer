@@ -92,21 +92,6 @@ User Stories:
 
 
 -------------------------------------------
-Example seeding data:
-
-does tux save to database?
-
-user1 = User.create(name: "bob", email: "bob@bob")
-user1.save ??
-
-standard1 = Standard.create(title: "somestandard1", description: "thermodynamics concept 1")
-
-resource1 = Resource.create(title: "1st Law of Thermodynamics", link: "www.khan.thermo1.com")
-
-?? do i need add the user? initially
-?? do i need to write it differently?
-ex. standard1 = Standard.create(:title => "somestandard",)
-
 
 =========================
 Sqlite explorer TO SEE/VISUALIZ DATABASE:
@@ -162,3 +147,14 @@ resource4 = Resource.create(
     link: "https://www.khanacademy.org/science/in-in-class-12th-physics-india/nuclei/in-in-nuclear-physics/a/radioactive-decay-types-article",
     standards: [standard2]
 )
+
+
+
+=================================================================
+QUESTIONS:
+1.  do i need to do this for the password?
+class User < ActiveRecord::Base
+  validates_presence_of :name, :email, :password
+end
+
+2.

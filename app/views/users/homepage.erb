@@ -1,8 +1,14 @@
-<h1>Welcome <%= @user.name %> to the Teachers App!</h1>
+<h1>Welcome to the Teachers App!</h1>
 
+<h2><%= @user.name %>'s Homepage</h2>
+
+<h3>Here are your Standards and Resources:</h3>
 <ul>
 <% @standards.each do |standard|%>
-  <li><%= standard.title %></li>
+  <li><%= "Standard:" %><br><%= standard.title %><br><br>
+  <%= "Description:" %><br><%= standard.description %><br><br>
+  <%= "Resources:" %>
+  </li>
 <% end %>
 </ul>
 
