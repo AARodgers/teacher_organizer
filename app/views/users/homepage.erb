@@ -5,11 +5,12 @@
 <h3>Here are your Standards and Resources:</h3>
 <ul>
 <% @standards.each do |standard|%>
-  <li><%= "Standard:" %><br><%= standard.title %><br><br>
-  <%= "Description:" %><br><%= standard.description %><br><br>
+  <li>
+  <%= "Standard:" %><br><ul><li><%= standard.title %></li></ul><br><br>
+  <%= "Description:" %><br><ul><li><%= standard.description %></li></ul><br><br>
   <%= "Resources:" %><br>
   <% standard.resources.each do |resource| %>
-  <%= resource.link %>
+  <ul><li><%= resource.link %></li></ul>
   <% end %>
   </li>
 <% end %>
