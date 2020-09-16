@@ -1,8 +1,4 @@
 Git/GitHub Notes:
-1. Git: make new repo with readme and license, fork and clone, in terminal under the correct directory do: git clone 'link from github', cd into that file and code . to start coding in VS code
-
-
-
 
 APP Notes:
 (Order to creating an app: database, models, controllers, views)
@@ -31,7 +27,7 @@ end
 6.
 
 
-
+==================================================
 To fix, no database connection:
 - add database.yml file to config folder
 - erase this code from environment.db:
@@ -147,6 +143,32 @@ resource4 = Resource.create(
     link: "https://www.khanacademy.org/science/in-in-class-12th-physics-india/nuclei/in-in-nuclear-physics/a/radioactive-decay-types-article",
     standards: [standard2]
 )
+-----------------------------
+user7 = User.create(name: "Teacher Nano", email: "nano@internet_high_school.com", password: "professor")
+
+standard2 = Standard.create(
+    title: "",
+    description: "",
+    users: [user7]
+)
+
+resource2 = Resource.create(
+    title: "Video summary of electromagnetic spectrum and different waves",
+    link: "https://www.youtube.com/watch?v=cfXzwh3KadE",
+    standards: [standard2]
+)
+
+resource3 = Resource.create(
+    title: "Video for Ultra-violet rays and radiation",
+    link: "https://www.youtube.com/watch?v=QW5zeVy8aE0",
+    standards: [standard2]
+)
+
+resource4 = Resource.create(
+    title: "Alpha, Beta, Gamma Decay Article to read",
+    link: "https://www.khanacademy.org/science/in-in-class-12th-physics-india/nuclei/in-in-nuclear-physics/a/radioactive-decay-types-article",
+    standards: [standard2]
+)
 
 
 
@@ -157,4 +179,12 @@ class User < ActiveRecord::Base
   validates_presence_of :name, :email, :password
 end
 
-2.
+2. how do i get the links to work?
+  <%= "Resources:" %><br>
+    <% standard.resources.each do |resource| %>
+    <ul><li><%= resource.title  %></li></ul>
+    <ul><li><a href="<% resource.link %>">Resource Link</a></li></ul><br>
+    <% end %>
+  </li>
+
+  3. 

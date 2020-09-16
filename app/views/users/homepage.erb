@@ -6,12 +6,13 @@
 <ul>
 <% @standards.each do |standard|%>
   <li>
-  <%= "Standard:" %><br><ul><li><%= standard.title %></li></ul><br><br>
-  <%= "Description:" %><br><ul><li><%= standard.description %></li></ul><br><br>
+  <%= "Standard:" %><br><ul><li><%= standard.title %></li></ul><br>
+  <%= "Description:" %><br><ul><li><%= standard.description %></li></ul><br>
   <%= "Resources:" %><br>
-  <% standard.resources.each do |resource| %>
-  <ul><li><%= resource.link %></li></ul>
-  <% end %>
+    <% standard.resources.each do |resource| %>
+    <ul><li><%= resource.title  %></li></ul>
+    <ul><li><%= resource.link %></li></ul><br>
+    <% end %>
   </li>
 <% end %>
 </ul>
