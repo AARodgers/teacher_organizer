@@ -7,7 +7,10 @@
 <% @standards.each do |standard|%>
   <li><%= "Standard:" %><br><%= standard.title %><br><br>
   <%= "Description:" %><br><%= standard.description %><br><br>
-  <%= "Resources:" %>
+  <%= "Resources:" %><br>
+  <% standard.resources.each do |resource| %>
+  <%= resource.link %>
+  <% end %>
   </li>
 <% end %>
 </ul>
