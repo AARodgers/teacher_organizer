@@ -2,7 +2,12 @@
 
 <h2><%= @user.name %>'s Homepage</h2>
 
+<form action='/standards/new' method='POST'>
+  <button type='submit'>Add Standard</button>
+</form>
+
 <h3>Here are your Standards and Resources:</h3>
+
 <ul>
 <% @standards.each do |standard|%>
   <li>
