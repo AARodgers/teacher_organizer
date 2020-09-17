@@ -6,12 +6,18 @@ class StandardsController < ApplicationController
         erb :'users/homepage'
     end
 
-    get '/standards/new' do
+    get '/standard/new' do
         if logged_in?
             erb :'standards/create_standard'
         else
             redirect to '/homepage'
         end
     end
+
+
+
+
+
+
 
 end
