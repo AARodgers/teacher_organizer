@@ -16,10 +16,11 @@ class StandardsController < ApplicationController
 
     post '/homepage' do
       if logged_in?
-        if params[:content] == ""
+        if params[:standard_title] == "" && params[:standard_description] == ""
+          # need to remove resource from form? and add above?
           redirect to '/standards/new'
         else
-          @standard = current_user.standards.build(content: params[:content])
+          @standard = current_user.standards.build(title: params[:standard_title], description: params[:standard_description])
           if @standard.save
             redirect to "/standards/#{@standard.id}"
           else
