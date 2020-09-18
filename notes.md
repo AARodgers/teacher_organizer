@@ -212,4 +212,6 @@ end
     <% end %>
   </li>
 
-  3.
+  3. Why do I have 3 Teacher Tonya's in database (b.practicing signing up) and should I delete 2 so it doesn't get confused which on is logged in? how?
+
+  4. it's not attaching standards to user? why

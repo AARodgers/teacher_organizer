@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
 
     post '/sessions' do
         login(params[:email], params[:password])
-        redirect '/homepage'
+        redirect '/users/homepage'
     end
 
     post '/logout' do
