@@ -144,51 +144,51 @@ resource4 = Resource.create(
     standards: [standard2]
 )
        -------------------------------------------------------------------------
-standard3 = Standard.create(
+standard7 = Standard.create(
   title: "The difference between entropy and enthalpy (SC09-GR.HS-S.1-GLE.6-EO.a,b; IQ.3)",
   description: "Students should be able to define entropy and enthalpy and give examples of each",
   users: [user4]
   )
 
-  resource5 = Resource.create(
+  resource8 = Resource.create(
     title: "Video about enthalpy",
     link: "https://www.khanacademy.org/science/ap-chemistry/thermodynamics-ap/enthalpy-tutorial-ap/v/enthalpy",
     standards: [standard3]
 )
 
-resource6 = Resource.create(
+resource9 = Resource.create(
     title: "Intro video to entropy",
     link: "https://www.khanacademy.org/science/ap-chemistry/thermodynamics-ap/entropy-tutorial-ap/v/introduction-to-entropy",
     standards: [standard3]
 )
 
-resource7 = Resource.create(
+resource10 = Resource.create(
     title: "Article to read regarding difference between entropy and enthalpy",
     link: "https://sciencestruck.com/difference-between-entropy-enthalpy-in-thermodynamics",
     standards: [standard3]
 -----------------------------
-user7 = User.create(name: "Teacher Nano", email: "nano@internet_high_school.com", password: "professor")
+user9 = User.create(name: "Teacher Nano", email: "nano@internet_high_school.com", password: "professor")
 
-standard4 = Standard.create(
+standard8 = Standard.create(
     title: "Various forms of electromagnetic radiation (x-rays, ultraviolet, alpha particles, beta
     particles, gamma particles, infrared, etc.) (SC09-GR.HS-S.1-GLE.2;RA.4;IQ.2)",
     description: "Students should be able to identify different kinds of electromagnetic radiation and list one characteristic about each",
     users: [user7]
 )
 
-resource2 = Resource.create(
+resource11 = Resource.create(
     title: "Article about x-rays",
     link: "https://www.livescience.com/32344-what-are-x-rays.html#:~:text=X%2Drays%20are%20a%20very,images%20of%20the%20human%20body.&text=The%20only%20difference%20between%20them,one%20of%20four%20nuclear%20reactions.",
     standards: [standard4]
 )
 
-resource3 = Resource.create(
+resource12 = Resource.create(
     title: "Video for Ultra-violet rays and radiation",
     link: "https://www.youtube.com/watch?v=QW5zeVy8aE0",
     standards: [standard4]
 )
 
-resource4 = Resource.create(
+resource13 = Resource.create(
     title: "Alpha, Beta, Gamma Decay Article to read",
     link: "https://www.khanacademy.org/science/in-in-class-12th-physics-india/nuclei/in-in-nuclear-physics/a/radioactive-decay-types-article",
     standards: [standard4]
@@ -212,6 +212,5 @@ end
     <% end %>
   </li>
 
-  3. Why do I have 3 Teacher Tonya's in database (b.practicing signing up) and should I delete 2 so it doesn't get confused which on is logged in? how?
 
-  4. it's not attaching standards to user? why
+  3. it's not attaching standards to user? fixed? but why won't title and description change in sqlite? 

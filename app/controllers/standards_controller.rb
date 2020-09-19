@@ -29,4 +29,17 @@ class StandardsController < ApplicationController
       end
     end
 
+    get '/standards/:id/edit' do
+      if logged_in?
+        @standard = Standard.find_by_id(params[:id])
+        if @standard && @standard.user == current_user
+          erb :'standards/edit_standard'
+          else
+            redirect to '/users/hompage'
+          end
+        else
+          redirect to '/homepage'
+      end
+    end
+
 end
