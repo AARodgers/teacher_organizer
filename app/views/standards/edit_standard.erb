@@ -21,3 +21,10 @@
     </label><br><br>
     <input type='submit' value='Save'>
 </form>
+
+<h1>Delete Standard:</h1>
+
+<form method='POST' action='/standards/<%= @standard.id %>'>
+    <input type='hidden' type='hidden' name='_method' value='DELETE'>
+    <input type='submit' value='Delete'>
+</form>

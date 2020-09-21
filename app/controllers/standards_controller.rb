@@ -77,17 +77,14 @@ class StandardsController < ApplicationController
       redirect "/standards/#{@standard.id}"
     end
 
-    delete '/standards/:id/delete' do
+    delete '/standards/:id' do
       unless logged_in?
         redirect to '/homepage'
         return
       end
 
-      unless @standard && @standard.user == current_user
-        redirect to '/users/homepage'
-        return
-      end
-
-      @standard.delete!
+      @standard = Standard.find_by_id(params[:id])
+      @standard.delete
+      redirect '/users/homepage'
     end
 end
