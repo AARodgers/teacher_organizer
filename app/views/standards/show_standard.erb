@@ -1,8 +1,12 @@
-<h1>Show Standard</h1>
-
-<%= "Standard:" %><br><ul><li><%= @standard.title %></li></ul><br>
-<%= "Description:" %><br><ul><li><%= @standard.description %></li></ul><br>
-<%= "Resources:" %><br>
+<!DOCTYPE html>
+<html>
+<header>
+  <link href="<%= url('/style.css') %>" rel="stylesheet" type="text/css" />
+</header>
+<section id="container">
+<%= "Standard Title:" %><br><ul><li><%= @standard.title %></li></ul><br>
+<%= "Standard Description:" %><br><ul><li><%= @standard.description %></li></ul><br>
+<%= "Standard Resources:" %><br>
 <ul>
 <% @standard.resources.each do |resource| %>
     <li><%= resource.title  %></li>
@@ -10,6 +14,8 @@
 <% end %>
 </ul>
 
-<a href='/standards/<%= @standard.id %>/edit'>Edit Standard</a><br>
+<a href='/standards/<%= @standard.id %>/edit' class="button">Edit Standard</a><br><br>
 
-<a href='/users/homepage'>Return to Homepage</a>
+<a href='/users/homepage' class="button">Return to Homepage</a>
+</section>
+</html>
