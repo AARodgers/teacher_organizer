@@ -61,6 +61,22 @@ class StandardsController < ApplicationController
       redirect "/standards/#{@standard.id}"
     end
 
+    post '/standards/:id/resource' do
+      unless logged_in?
+        redirect '/users/homepage'
+        return
+      end
+
+      @standard = Standard.find_by_id(params[:id])
+      @resource = Resource.new
+      @resource.title = params[:title]
+      @resource.link = params[:description]
+      @resource.standards = [@standard]
+      @resource.save!
+
+      redirect "/standards/#{@standard.id}"
+    end
+
     delete '/standards/:id/delete' do
       unless logged_in?
         redirect to '/homepage'

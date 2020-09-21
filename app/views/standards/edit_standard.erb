@@ -10,3 +10,14 @@
     </label><br><br>
     <input type='submit' value='Save'>
 </form>
+
+<h1>Add Resource:</h1>
+<form method='POST' action='/standards/<%= @standard.id %>/resource'>
+    <label>Resource Title:
+        <input id='text' name='title'>
+    </label><br><br>
+    <label>Resource Link:
+        <input id='text' name='link'>
+    </label><br><br>
+    <input type='submit' value='Save'>
+</form>
