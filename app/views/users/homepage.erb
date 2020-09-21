@@ -4,12 +4,17 @@
   <link href="<%= url('/style.css') %>" rel="stylesheet" type="text/css" />
 </header>
 
+<section id="welcome">
+<div>
 <h1>Welcome to the Teachers App!</h1>
-
 <h3><%= @user.name %>'s Homepage</h3><br>
+</div>
+</section>
 
+<section id="standards">
+<div>
 <h2>Here are your Standards and Resources:</h2>
-</h3><a href="/standards/new">Add a Standard</a><br>
+</h3><a href="/standards/new" class="button">Add a Standard</a><br>
 
 <ul>
 <% @standards.each do |standard|%>
@@ -29,4 +34,6 @@
 <form action='/logout' method='POST'>
     <button type="submit">Log Out</button>
 </form>
+</div>
+</section>
 </html>
