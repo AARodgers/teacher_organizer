@@ -51,10 +51,14 @@ class StandardsController < ApplicationController
     patch '/standards/:id' do
       unless logged_in?
         redirect '/homepage'
+        return
       end
-      return
 
-      
+      @standard = Standard.find_by_id(params[:id])
+      @standard.title = params[:title]
+      @standard.description = params[:description]
+      @standard.save!
+      redirect "/standards/#{@standard.id}"
     end
 
     delete '/standards/:id/delete' do
