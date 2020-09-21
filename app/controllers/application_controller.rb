@@ -1,12 +1,10 @@
 class ApplicationController < Sinatra::Base
 
     configure do
-        # set :public_folder, 'public'
+        set :public_folder, 'public'
         set :views, 'app/views'
-        # set :sessions_secret, "secret"
     end
             #?? what is public folder and does it need to be set to public and is session secret already done in config.ru
-
 
     helpers do
 
@@ -14,7 +12,6 @@ class ApplicationController < Sinatra::Base
             !!current_user
         end
     end
-
 
         def current_user
             @current_user ||= User.find_by(:email => session[:email]) if session[:email]
