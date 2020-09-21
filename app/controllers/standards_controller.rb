@@ -29,17 +29,26 @@ class StandardsController < ApplicationController
       end
     end
 
-    get '/standards/:id/edit' do
-      if logged_in?
-        @standard = Standard.find_by_id(params[:id])
-        if @standard && @standard.user == current_user
-          erb :'standards/edit_standard'
-          else
-            redirect to '/users/hompage'
-          end
-        else
-          redirect to '/homepage'
+    get '/standards/:id' do
+      unless logged_in?
+        redirect to '/users/homepage'
+        return
       end
+      @standard = Standard.find_by_id(params[:id])
+      erb :'standards/show_standard'
     end
 
+    delete '/standards/:id/delete' do
+      unless logged_in?
+        redirect to '/homepage'
+        return
+      end
+
+      unless @standard && @standard.user == current_user
+        redirect to '/users/homepage'
+        return
+      end
+
+      @standard.delete!
+    end
 end

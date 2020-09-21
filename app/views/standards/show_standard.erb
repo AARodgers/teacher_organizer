@@ -1,0 +1,11 @@
+<h1>Show Standard</h1>
+
+<%= "Standard:" %><br><ul><li><%= @standard.title %></li></ul><br>
+<%= "Description:" %><br><ul><li><%= @standard.description %></li></ul><br>
+<%= "Resources:" %><br>
+<ul>
+<% @standard.resources.each do |resource| %>
+    <li><%= resource.title  %></li>
+    <li><%= resource.link %></li>
+<% end %>
+</ul>
