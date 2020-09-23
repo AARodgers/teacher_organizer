@@ -19,9 +19,9 @@
 <ul>
 <% @standards.each do |standard|%>
   <li>
-  <%= "Standard:" %><br><ul><li><%= standard.title %></li></ul><br>
-  <%= "Description:" %><br><ul><li><%= standard.description %></li></ul><br>
-  <%= "Resources:" %><br>
+  <b><%= "Standard:" %><b><br><ul><li><%= standard.title %></li></ul><br>
+  <b><%= "Description:" %></b><br><ul><li><%= standard.description %></li></ul><br>
+  <b><%= "Resources:" %></b><br>
     <% standard.resources.each do |resource| %>
     <ul><li><%= resource.title  %></li></ul>
     <ul><li><%= resource.link %></li></ul><br>

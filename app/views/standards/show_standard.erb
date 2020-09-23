@@ -3,19 +3,19 @@
 <header>
   <link href="<%= url('/style.css') %>" rel="stylesheet" type="text/css" />
 </header>
-<section id="container">
-<%= "Standard Title:" %><br><ul><li><%= @standard.title %></li></ul><br>
-<%= "Standard Description:" %><br><ul><li><%= @standard.description %></li></ul><br>
-<%= "Standard Resources:" %><br>
+<body>
+<b><%= "Standard Title:" %></b><br><ul><li><%= @standard.title %></li></ul><br>
+<b><%= "Standard Description:" %></b><br><ul><li><%= @standard.description %></li></ul><br>
+<b><%= "Standard Resources:" %></b><br>
 <ul>
 <% @standard.resources.each do |resource| %>
     <li><%= resource.title  %></li>
-    <li><%= resource.link %></li>
+    <li><%= resource.link %></li><br>
 <% end %>
 </ul>
 
 <a href='/standards/<%= @standard.id %>/edit' class="button">Edit Standard</a><br><br>
 
 <a href='/users/homepage' class="button">Return to Homepage</a>
-</section>
+</body>
 </html>
