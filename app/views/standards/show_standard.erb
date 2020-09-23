@@ -9,10 +9,10 @@
 <b><%= "Add Resources:" %></b><br>
 <ul>
 <% @standard.resources.each do |resource| %>
-    <li><%= resource.title  %></li>
-    <section id="resource_link">
-    <%= resource.link %><br>
-    </section>
+    <li><b><%= resource.title  %></b></li>
+      <section id="resource_link">
+        <a href="<%= resource.link %>" target="_blank"><%= resource.link %></a>
+      </section><br>
 <% end %>
 </ul><br><br>
 
