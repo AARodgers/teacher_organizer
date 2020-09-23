@@ -1,13 +1,24 @@
-<h1>Login</h1>
 
-<form action='/sessions' method='POST'>
-    <p>
-        <label for='email'>Email:</label>
-        <input type='text' name='email' id='email' />
-    </p>
-    <p>
-        <label for='password'>Password</label>
-        <input type='text' name='password' id='password' />
-    </p>
-    <input type='submit'>
-</form>
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="<%= url('/style.css') %>" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+	<section id="login">
+		<h1>Login</h1>
+			<form action='/sessions' method='POST'>
+					<p>
+							<label for='email'>Email:</label>
+							<input type='text' name='email' id='email' />
+					</p>
+					<p>
+							<label for='password'>Password</label>
+							<input type='text' name='password' id='password' />
+					</p>
+					<input type='submit'>
+			</form>
+	</section>
+</body>
+</html>
