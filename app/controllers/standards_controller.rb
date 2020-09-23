@@ -70,7 +70,7 @@ class StandardsController < ApplicationController
       @standard = Standard.find_by_id(params[:id])
       @resource = Resource.new
       @resource.title = params[:title]
-      @resource.link = params[:description]
+      @resource.link = params[:link]
       @resource.standards = [@standard]
       @resource.save!
 

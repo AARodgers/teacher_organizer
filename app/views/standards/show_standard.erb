@@ -15,7 +15,9 @@
 </ul>
 
 <a href='/standards/<%= @standard.id %>/edit' class="button">Edit Standard</a><br><br>
+<a href='/users/homepage' class="button">Return to Homepage</a><br><br>
 
-<a href='/users/homepage' class="button">Return to Homepage</a>
+<form action='/logout' method='POST'>
+    <button type="submit">Log Out</button>
 </body>
 </html>

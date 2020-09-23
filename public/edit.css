@@ -1,0 +1,16 @@
+body {
+    background-color: rgb(185, 247, 238);
+}
+
+.button {
+    background-color: -internal-light-dark(rgb(239, 239, 239), rgb(74, 74, 74));
+    font: 400 13.3333px Arial;
+    text-decoration: none;
+    background-color: #EEEEEE;
+    color: #333333;
+    padding: 2px 6px 2px 6px;
+    border-top: 1px solid #333333;
+    border-right: 1px solid #333333;
+    border-bottom: 1px solid #333333;
+    border-left: 1px solid #333333;
+}
