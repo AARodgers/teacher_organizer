@@ -6,13 +6,15 @@
 <body>
 <b><%= "Standard Title:" %></b><br><ul><li><%= @standard.title %></li></ul><br>
 <b><%= "Standard Description:" %></b><br><ul><li><%= @standard.description %></li></ul><br>
-<b><%= "Standard Resources:" %></b><br>
+<b><%= "Add Resources:" %></b><br>
 <ul>
 <% @standard.resources.each do |resource| %>
     <li><%= resource.title  %></li>
-    <li><%= resource.link %></li><br>
+    <section id="resource_link">
+    <%= resource.link %><br>
+    </section>
 <% end %>
-</ul>
+</ul><br><br>
 
 <a href='/standards/<%= @standard.id %>/edit' class="button">Edit Standard</a><br><br>
 <a href='/users/homepage' class="button">Return to Homepage</a><br><br>
