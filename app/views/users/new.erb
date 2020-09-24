@@ -1,20 +1,29 @@
-<h1>Sign Up</h1>
+<!DOCTYPE html>
+<html>
+<header>
+  <link href="<%= url('/edit.css') %>" rel="stylesheet" type="text/css" />
+</header>
 
-<form action='/users' method='POST'>
-    <p>
-        <label for='name'>Name:</label>
-        <input type='text' name='name' id='name' />
-    </p>
+<body>
+    <h1>Sign Up</h1>
 
-    <p>
-        <label for='email'>Email:</label>
-        <input type='text' name='email' id='email' />
-    </p>
-    <p>
+    <form action='/users' method='POST'>
+        <p>
+            <label for='name'>Name:</label>
+            <input type='text' name='name' id='name' />
+        </p>
 
-      <label for='password'>Password:</label>
-      <input type='password' name='password' id='password' />
-    </p>
+        <p>
+            <label for='email'>Email:</label>
+            <input type='text' name='email' id='email' />
+        </p>
+        <p>
 
-    <input type='submit'>
-</form>
+        <label for='password'>Password:</label>
+        <input type='password' name='password' id='password' />
+        </p>
+
+        <input type='submit'>
+    </form>
+</body>
+</html>

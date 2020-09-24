@@ -144,6 +144,8 @@ resource4 = Resource.create(
     standards: [standard2]
 )
        -------------------------------------------------------------------------
+NEW STANDARD:
+
 standard7 = Standard.create(
   title: "The difference between entropy and enthalpy (SC09-GR.HS-S.1-GLE.6-EO.a,b; IQ.3)",
   description: "Students should be able to define entropy and enthalpy and give examples of each",
@@ -151,23 +153,23 @@ standard7 = Standard.create(
   )
 
   resource8 = Resource.create(
-    title: "Video about enthalpy",
+    title: "Video about enthalpy:",
     link: "https://www.khanacademy.org/science/ap-chemistry/thermodynamics-ap/enthalpy-tutorial-ap/v/enthalpy",
     standards: [standard3]
 )
 
 resource9 = Resource.create(
-    title: "Intro video to entropy",
+    title: "Intro video to entropy:",
     link: "https://www.khanacademy.org/science/ap-chemistry/thermodynamics-ap/entropy-tutorial-ap/v/introduction-to-entropy",
     standards: [standard3]
 )
 
 resource10 = Resource.create(
-    title: "Article to read regarding difference between entropy and enthalpy",
+    title: "Article to read regarding difference between entropy and enthalpy:",
     link: "https://sciencestruck.com/difference-between-entropy-enthalpy-in-thermodynamics",
     standards: [standard3]
 -----------------------------
-user9 = User.create(name: "Teacher Nano", email: "nano@internet_high_school.com", password: "professor")
+user9 = User.create(name: "Professor Nano", email: "nano@internet_high_school.com", password: "professor")
 
 standard8 = Standard.create(
     title: "Various forms of electromagnetic radiation (x-rays, ultraviolet, alpha particles, beta
@@ -194,23 +196,3 @@ resource13 = Resource.create(
     standards: [standard4]
 )
 
------------------------------------------------------------------
-
-
-=================================================================
-QUESTIONS:
-1.  do i need to do this for the password?
-class User < ActiveRecord::Base
-  validates_presence_of :name, :email, :password
-end
-
-2. how do i get the links to work?
-  <%= "Resources:" %><br>
-    <% standard.resources.each do |resource| %>
-    <ul><li><%= resource.title  %></li></ul>
-    <ul><li><a href="<% resource.link %>">Resource Link</a></li></ul><br>
-    <% end %>
-  </li>
-
-
-  3. it's not attaching standards to user? fixed? but why won't title and description change in sqlite? 

@@ -24,11 +24,11 @@
   <b><%= "Resources:" %></b><br>
     <% standard.resources.each do |resource| %>
     <ul>
-      <li><%= resource.title %></li>
+      <%= resource.title %>
       <section id="resource_link2">
         <a href="<%= resource.link %>" target="_blank"><%= resource.link %></a>
       </section>
-    </ul><br>
+    </ul>
     <% end %>
   </li><br>
   <a href='/standards/<%= standard.id %>' class="button">Show Standard</a><br><br>

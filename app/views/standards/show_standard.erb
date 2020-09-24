@@ -9,12 +9,13 @@
 <b><%= "Add Resources:" %></b><br>
 <ul>
 <% @standard.resources.each do |resource| %>
-    <li><b><%= resource.title  %></b></li>
+    <ul><b><%= resource.title  %></b>
       <section id="resource_link">
         <a href="<%= resource.link %>" target="_blank"><%= resource.link %></a>
-      </section><br>
+      </section>
+      </ul><br>
 <% end %>
-</ul><br><br>
+</ul>
 
 <a href='/standards/<%= @standard.id %>/edit' class="button">Edit Standard</a><br><br>
 <a href='/users/homepage' class="button">Return to Homepage</a><br><br>
