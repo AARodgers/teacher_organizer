@@ -100,3 +100,15 @@ resource13 = Resource.create(
     link: "https://www.khanacademy.org/science/in-in-class-12th-physics-india/nuclei/in-in-nuclear-physics/a/radioactive-decay-types-article",
     standards: [standard4]
 )
+=====================================================================
+To Do:
+-Notes on Code Review:
+    - in def login, it's more conventional to use session[:id] = user.id
+    - authenticate.password is used to make sure that the encrypted password ( from bycrpt gem) matches the unencrypted password
+    - consider having only one instance of standards in database that users share ( so would belong_to a user, BUT standards do change per CDE)
+    - be able to edit resources ( now have 2 forms on page) would need JS?
+    - anyone can edit another users standards by going to their URL (ex. /3/standard), this is because a standard doesn't belong to a user
+    - suggestion: add a realtion btw standard belongs_to creator and pass an option of class name ( in Rails? or Active Record option), would create a user_id column
+    - in tux when tried to attach a newly create user ( user1) with a new standard ( standard1) it saved the standard1 that was in the database, need Active Record validations to the only that user saves that standard
+    - user Active Record validation for uniquness of emails
+    - look to use .build to instantiate objects
