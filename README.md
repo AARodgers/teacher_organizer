@@ -6,7 +6,7 @@ This app is designed to help teachers keep track of the many educational standar
 
 # Installation
 
-```sh
+
 # Clone this project locally
 git clone https://github.com/AARodgers/teachers_app.git
 
@@ -35,3 +35,48 @@ I accept pull requests from people that want to improve upon this app or add fea
 
 # License
 License information can be found in the [LICENSE](LICENSE) file.
+
+
+===============================================================================
+# TODO for each repo
+- [ ] Rename repos to something short and clean: all lowercase, underscores, keep it concise
+  - [ ] Teachers app -> teacher_organizer
+  - [ ] CLI APP Wic Clinic Finder -> wic_clinic_finder
+- [ ] Write description for repo in About section
+- [ ] Write README
+- [ ] Add LICENSE file
+- [ ] Make sure license appears in About section properly
+- [ ] Clean repo of unused/useless/incorrect files
+- [ ] Lint all files with [RuboCop](https://rubocop.org/)
+  - [ ] Fix all discovered issues with `rubocop --fix` and manual intervention
+  - [ ] Commit all fixes
+- [ ] Run application from scratch, using the instructions from your README verbatim
+  - [ ] Correct any issues with your README Getting Started section
+- [ ] Document all major methods with comments
+- [ ] Get rid of any TODO comments left lying around
+
+# README for each repo
+- [ ] Application name
+- [ ] Description
+  - [ ] Link to YouTube walkthrough
+- [ ] Intent (who is this for? how will it help them?)
+- [ ] Getting Started (installation)
+- [ ] Usage
+- [ ] Contributing
+- [ ] License
+
+# Teacher Organizer
+- [ ] Audit every controller method
+  - [ ] Add a comment to every controller method
+  - [ ] Install [Sinatra Flash](https://github.com/SFEley/sinatra-flash)
+  - [ ] Add flash messages to the head of every template
+  - [ ] Replace all `if logged_in?` checks with guard-style `unless logged_in? redirect; flash; return` checks
+- [ ] Document every model (one-line comments are fine)
+- [ ] Fix up styling - modernize style, colors, fonts
+- [ ] Re-record video with concise script
+
+# WIC Clinic Finder
+- [ ] Document your model class
+- [ ] Review your use of `system("clear")` and remove redundant calls
+- [ ] Get rid of all commented lines of code
+- [ ] Instead of printing every clinic's info, first print the list of clinics, ask the user to select one, and print that clinic's info

@@ -14,6 +14,14 @@ class StandardsController < ApplicationController
   end
 
   post '/users/homepage' do
+    unless logged_in?
+      flash "Not logged in"
+      redirect_to '/'
+      return
+    end
+
+    # the user is logged in...
+
     if logged_in?
       if params[:standard_title] == "" && params[:standard_description] == ""
         redirect to '/standards/new'
