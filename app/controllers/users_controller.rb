@@ -1,11 +1,10 @@
 class UsersController < ApplicationController
-
   get '/teachersapp' do
     erb :'homepage'
   end
 
   get '/signup' do
-      erb :'users/new'
+    erb :'users/new'
   end
 
   post '/signup' do
@@ -30,5 +29,4 @@ class UsersController < ApplicationController
       erb :'users/new'
     end
   end
-
 end

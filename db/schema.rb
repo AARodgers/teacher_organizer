@@ -11,7 +11,6 @@
 # It's strongly recommended that you check this file into your version control system.
 
 ActiveRecord::Schema.define(version: 2020_09_08_183400) do
-
   create_table "resources", force: :cascade do |t|
     t.string "title"
     t.string "link"
@@ -37,5 +36,4 @@ ActiveRecord::Schema.define(version: 2020_09_08_183400) do
     t.string "email"
     t.string "password_digest"
   end
-
 end
