@@ -20,8 +20,6 @@ class StandardsController < ApplicationController
       return
     end
 
-    # the user is logged in...
-
     if logged_in?
       if params[:standard_title] == "" && params[:standard_description] == ""
         redirect to '/standards/new'

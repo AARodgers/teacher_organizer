@@ -3,7 +3,6 @@ class ApplicationController < Sinatra::Base
     set :public_folder, 'public'
     set :views, 'app/views'
   end
-  # ?? what is public folder and does it need to be set to public and is session secret already done in config.ru
 
   helpers do
     def logged_in?
