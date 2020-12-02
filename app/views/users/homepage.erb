@@ -1,43 +1,43 @@
 <!DOCTYPE html>
 <html>
-<header>
-  <link href="<%= url('/style.css') %>" rel="stylesheet" type="text/css" />
-</header>
+  <header>
+    <link href="<%= url('/style.css') %>" rel="stylesheet" type="text/css" />
+  </header>
 
-<section id="welcome">
-<div>
-<h1>Welcome to the Teachers App!</h1>
-<h3><%= @user.name %>'s Homepage</h3><br>
-</div>
-</section>
+  <section id="welcome">
+  <div>
+  <h1>Welcome to the Teachers App!</h1>
+  <h3><%= @user.name %>'s Homepage</h3><br>
+  </div>
+  </section>
 
-<section id="standards">
-<div>
-<h2>Here are your Standards and Resources:</h2>
-</h3><a href="/standards/new" class="button">Add a Standard</a><br>
+  <section id="standards">
+    <div>
+      <h2>Here are your Standards and Resources:</h2>
+      <h3><a href="/standards/new" class="button">Add a Standard</a></h3><br>
 
-<ul>
-<% @standards.each do |standard|%>
-  <li>
-  <b><%= "Standard:" %></b><br><ul><li><%= standard.title %></li></ul><br>
-  <b><%= "Description:" %></b><br><ul><li><%= standard.description %></li></ul><br>
-  <b><%= "Resources:" %></b><br>
-    <% standard.resources.each do |resource| %>
-    <ul>
-      <%= resource.title %>
-      <section id="resource_link2">
-        <a href="<%= resource.link %>" target="_blank"><%= resource.link %></a>
-      </section>
-    </ul>
-    <% end %>
-  </li><br>
-  <a href='/standards/<%= standard.id %>' class="button">Show Standard</a><br><br>
-<% end %>
-</ul>
+      <ul>
+      <% @standards.each do |standard|%>
+        <li>
+        <b><%= "Standard:" %></b><br><ul><li><%= standard.title %></li></ul><br>
+        <b><%= "Description:" %></b><br><ul><li><%= standard.description %></li></ul><br>
+        <b><%= "Resources:" %></b><br>
+          <% standard.resources.each do |resource| %>
+          <ul>
+            <%= resource.title %>
+            <section id="resource_link2">
+              <a href="<%= resource.link %>" target="_blank"><%= resource.link %></a>
+            </section>
+          </ul>
+          <% end %>
+        </li><br>
+        <a href='/standards/<%= standard.id %>' class="button">Show Standard</a><br><br>
+      <% end %>
+      </ul>
 
-<form action='/logout' method='POST'>
-    <button type="submit">Log Out</button>
-</form>
-</div>
-</section>
+      <form action='/logout' method='POST'>
+          <button type="submit">Log Out</button>
+      </form>
+    </div>
+  </section>
 </html>
