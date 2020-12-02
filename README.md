@@ -39,13 +39,13 @@ License information can be found in the [LICENSE](LICENSE) file.
 
 ===============================================================================
 # TODO for each repo
-- [ ] Rename repos to something short and clean: all lowercase, underscores, keep it concise
-  - [ ] Teachers app -> teacher_organizer
-  - [ ] CLI APP Wic Clinic Finder -> wic_clinic_finder
-- [ ] Write description for repo in About section
+- [ x] Rename repos to something short and clean: all lowercase, underscores, keep it concise
+  - [ x] Teachers app -> teacher_organizer
+  - [ x] CLI APP Wic Clinic Finder -> wic_clinic_finder
+- [ x] Write description for repo in About section
 - [ ] Write README
-- [ ] Add LICENSE file
-- [ ] Make sure license appears in About section properly
+- [x ] Add LICENSE file
+- [ x] Make sure license appears in About section properly
 - [ ] Clean repo of unused/useless/incorrect files
 - [ ] Lint all files with [RuboCop](https://rubocop.org/)
   - [ ] Fix all discovered issues with `rubocop --fix` and manual intervention
