@@ -1,8 +1,8 @@
 Make sure to create a good README.md with a short description, install instructions, a contributor's guide, and a link to the license for your code.
 
-# Teachers App
+# teacher_organizer
 
-This app is designed to help teachers keep track of the many educational standards that they are required to teach throughout the school year. It allows them to organize their resources that they use to demonstrate the concept to students under each standard.
+This project is designed to help teachers keep track of the state mandated educational standards that they are required to teach throughout the school year. It allows them to organize resources that they use to teach each standard.
 
 # Installation
 
@@ -39,6 +39,7 @@ License information can be found in the [LICENSE](LICENSE) file.
 
 ===============================================================================
 # TODO for each repo
+- [] ??  get rid of notes.md ???
 - [ x] Rename repos to something short and clean: all lowercase, underscores, keep it concise
   - [ x] Teachers app -> teacher_organizer
   - [ x] CLI APP Wic Clinic Finder -> wic_clinic_finder
