@@ -17,7 +17,8 @@ resource1 = Resource.create(
 user4 = User.create(name: 'Teacher Tonya', email: 'tonya@internet_high_school.com', password: 'teach')
 
 standard2 = Standard.create(
-  title: "Various forms of electromagnetic radiation (x-rays, ultraviolet, alpha particles, beta particles, gamma particles, infrared, etc.),
+  title: "Various forms of electromagnetic radiation (x-rays, ultraviolet, alpha particles,
+   beta particles, gamma particles, infrared, etc.),
    (SC09-GR.HS-S.1-GLE.2;RA.4;IQ.2)",
   description: 'Students should be able to identify and define the different kinds of electromagnetic radiation.',
   users: [user4]
