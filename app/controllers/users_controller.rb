@@ -9,6 +9,9 @@ class UsersController < ApplicationController
     erb :'users/new'
   end
 
+  # if user doesn't type any input on signup page redirect to signup page
+  # otherwise, save user input to database, create a session with the current user's id
+  # redirect to homepage
   post '/signup' do
     if params[:name] == '' || params[:email] == '' || params[:password] == ''
       redirect to '/signup'
