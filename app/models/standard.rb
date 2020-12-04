@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Standard < ActiveRecord::Base
   has_many :standard_resources
   has_many :user_standards

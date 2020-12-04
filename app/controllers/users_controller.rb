@@ -1,6 +1,8 @@
+# frozen_string_literal: true
+
 class UsersController < ApplicationController
   get '/teachersapp' do
-    erb :'homepage'
+    erb :homepage
   end
 
   get '/signup' do
@@ -8,10 +10,10 @@ class UsersController < ApplicationController
   end
 
   post '/signup' do
-    if params[:name] == "" || params[:email] == "" || params[:password] == ""
+    if params[:name] == '' || params[:email] == '' || params[:password] == ''
       redirect to '/signup'
     else
-      @user = User.new(:name => params[:name], :email => params[:email], :password => params[:password])
+      @user = User.new(name: params[:name], email: params[:email], password: params[:password])
       @user.save
       session[:user_id] = @user.id
       redirect to '/homepage'
