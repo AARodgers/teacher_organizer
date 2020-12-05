@@ -26,6 +26,7 @@ class ApplicationController < Sinatra::Base
     end
   end
 
+  # clear the session and redirect user back to website's homepage
   def logout!
     session.clear
     redirect to '/teachersapp'
