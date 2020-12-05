@@ -23,6 +23,8 @@ class UsersController < ApplicationController
     end
   end
 
+  # saves new user's information and directs them to login page
+  # if user's info wasn't successfully saved, send them to signup page
   post '/users' do
     @user = User.new
     @user.name = params[:name]
