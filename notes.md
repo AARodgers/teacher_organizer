@@ -123,6 +123,7 @@ To Do:
 - [ ]
 - [ ] how to comment correctly with "Missing top-level class documentation comment."
 - [ ] which methods are "major methods" to comment
+- [ ] how use flash? 
 - [ x] Rename repos to something short and clean: all lowercase, underscores, keep it concise
   - [ x] Teachers app -> teacher_organizer
   - [ x] CLI APP Wic Clinic Finder -> wic_clinic_finder
