@@ -10,13 +10,11 @@ class ApplicationController < Sinatra::Base
     end
   end
 
-  # current user is @current_user if @current is true, otherwise if user by current session email if that email already exist
   # If we don't know who the user is, find them by their session email
   def current_user
     @current_user ||= User.find_by(email: session[:email]) if session[:email]
   end
 
-  #authenticates user password if the session email is equal to user's email
   # Log the user in if their email and passsword match
   def login(email, password)
     user = User.find_by(email: email)

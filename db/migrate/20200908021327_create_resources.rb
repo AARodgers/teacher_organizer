@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Creates the Resource table with attributes title and link.
 class CreateResources < ActiveRecord::Migration[6.0]
   def change
     create_table :resources do |t|

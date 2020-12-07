@@ -8,7 +8,7 @@ standard1 = Standard.create(
   users: [user1]
 )
 
-resource1 = Resource.create(
+Resource.create(
   title: '1st Law in Thermodynamics',
   link: 'www.khanacademy_1st_law.com',
   standards: [standard1]

@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Creates join table for User and Standard models.
 class CreateUserStandards < ActiveRecord::Migration[6.0]
   def change
     create_table :user_standards do |t|

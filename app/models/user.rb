@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# A User is a teacher that will use this application to organize their teaching standards and resources to teach them.
 class User < ActiveRecord::Base
   has_secure_password
 
