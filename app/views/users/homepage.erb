@@ -7,15 +7,16 @@
 <body>
   <section id="welcome">
     <div>
-    <h1>Welcome to the Teachers App!</h1>
+    <h1>Welcome to the Teacher Organizer!</h1>
     <h3><%= @user.name %>'s Homepage</h3><br>
     </div>
   </section>
 
   <section id="standards">
     <div>
-      <h2>Here are your Standards and Resources:</h2>
-      <h3><a href="/standards/new" class="button">Add a Standard</a></h3><br>
+      <h3>Here are your Standards and Resources:</h3>
+      <h3><a href="/standards/new" class="spacious primary">Add a Standard &raquo;</a><br><br>
+      <%# <h3><a href="/standards/new" class="button">Add a Standard</a></h3><br> %>
 
       <ul>
       <% @standards.each do |standard|%>

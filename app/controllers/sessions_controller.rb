@@ -12,6 +12,7 @@ class SessionsController < ApplicationController
   # use user's input to log them in and save their info
   post '/sessions' do
     login(params[:email], params[:password])
+    @successful_login = session[:successful_login]
     redirect '/users/homepage'
   end
 
