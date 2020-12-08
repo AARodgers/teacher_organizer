@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+# Is the Sessions controller with login and logout methods.
+
 class SessionsController < ApplicationController
   get '/login' do
     erb :'sessions/login'

@@ -1,6 +1,13 @@
 # frozen_string_literal: true
 
+# Is the Users controller with methods to sign user up and save their sign-in information.
+require 'sinatra/base'
+require 'sinatra/flash'
+
 class UsersController < ApplicationController
+  # enable :sessions
+  register Sinatra::Flash
+
   get '/teachersapp' do
     erb :homepage
   end
@@ -9,9 +16,7 @@ class UsersController < ApplicationController
     erb :'users/new'
   end
 
-  # if user doesn't type any input on signup page redirect to signup page
-  # otherwise, save user input to database, create a session with the current user's id
-  # redirect to homepage
+  # Signs user up and directs them to their homepage
   post '/signup' do
     if params[:name] == '' || params[:email] == '' || params[:password] == ''
       redirect to '/signup'
@@ -31,6 +36,7 @@ class UsersController < ApplicationController
     @user.email = params[:email]
     @user.password = params[:password]
     if @user.save
+      session[:successful_signup] = "You have Sucessfully Created an Account"
       redirect '/login'
     else
       erb :'users/new'

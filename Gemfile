@@ -17,4 +17,5 @@ group :development do
   gem 'shotgun'
   gem 'sqlite3'
   gem 'tux'
+  gem 'sinatra-flash'
 end

@@ -16,5 +16,10 @@
         <input type='submit'>
       </form>
   </section>
+  <% if @successful_signup %>
+  <div id="signup_success" style="border: 2px solid green;">
+  <%= @successful_signup %>
+  </div>
+  <% end %>
 </body>
 </html>

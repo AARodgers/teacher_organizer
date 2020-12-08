@@ -5,6 +5,7 @@ id: 1, name: Teacher Bob, email: bob@internet_high_school.com, password: chemist
 id: 2, name: Teacher Susan, email: chemteach@highschool.com, password: test   ?:(encrypted)
 id: 3, name: Teacher Alice, email: alice@highschool.com, password: inwonderland
 id: 4, name: Teacher Matt, email: cara@highschool.com , password: hellcat
+test: name: name, email: email, password: password
 
 user1 = User.create(name: "Teacher Bob", email: "bob@internet_high_school.com")
 
