@@ -27,14 +27,14 @@ class UsersController < ApplicationController
     end
   end
 
-  # Creates a new user 
+  # Creates a new user
   post '/users' do
     @user = User.new
     @user.name = params[:name]
     @user.email = params[:email]
     @user.password = params[:password]
     if @user.save
-      session[:successful_signup] = "You have Sucessfully Created an Account"
+      session[:successful_signup] = "You have Sucessfully Created an Account!"
       redirect '/login'
     else
       erb :'users/new'
