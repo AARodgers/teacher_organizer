@@ -11,6 +11,11 @@ input[type="submit"] {
     padding: 4px 8px;
 }
 
+input[type="text"] {
+    padding: 4px 8px;
+    width: 500px;
+}
+
 .edit-page h1 {
     text-align: left;
 }
@@ -47,5 +52,3 @@ body {
 #resource_link2 {
     text-indent: 2%
 }
-
-
