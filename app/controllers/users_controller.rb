@@ -5,7 +5,6 @@ require 'sinatra/base'
 require 'sinatra/flash'
 
 class UsersController < ApplicationController
-  # enable :sessions
   register Sinatra::Flash
 
   get '/teachersapp' do
@@ -28,8 +27,7 @@ class UsersController < ApplicationController
     end
   end
 
-  # saves new user's information and directs them to login page
-  # if user's info wasn't successfully saved, send them to signup page
+  # Creates a new user 
   post '/users' do
     @user = User.new
     @user.name = params[:name]

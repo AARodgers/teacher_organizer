@@ -4,6 +4,8 @@
 
 class SessionsController < ApplicationController
   get '/login' do
+    @successful_signup = session[:successful_signup]
+    session[:successful_signup] = nil
     erb :'sessions/login'
   end
 
