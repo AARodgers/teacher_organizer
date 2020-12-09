@@ -43,7 +43,7 @@ body {
     margin-bottom: 40px;
     padding-left: 20px;
     padding-right: 20px;
-    border: solid 5px blue;
+    border: solid 5px #3498db;
     border-width: 10px;
 }
 
@@ -53,4 +53,12 @@ body {
 
 #resource_link2 {
     text-indent: 2%
+}
+
+#welcome {
+    text-align: center;
+}
+
+#users_name {
+    text-align: center;
 }
