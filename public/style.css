@@ -43,6 +43,8 @@ body {
     margin-bottom: 40px;
     padding-left: 20px;
     padding-right: 20px;
+    border: solid 5px blue;
+    border-width: 10px;
 }
 
 #resource_link {
