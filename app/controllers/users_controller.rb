@@ -3,7 +3,6 @@
 # Is the Users controller with methods to sign user up and save their sign-in information.
 
 class UsersController < ApplicationController
-
   get '/teachersapp' do
     erb :homepage
   end

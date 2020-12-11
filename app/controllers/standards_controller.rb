@@ -3,7 +3,6 @@
 # Is the Standards controller with methods to add, edit and remove standards from User's homepage.
 
 class StandardsController < ApplicationController
-
   # Directs current user to main homepage.
   get '/users/homepage' do
     @user = current_user

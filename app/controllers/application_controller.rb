@@ -3,7 +3,6 @@
 # Is Application Controller with helper methods for logging in and out.
 
 class ApplicationController < Sinatra::Base
-
   configure do
     set :public_folder, 'public'
     set :views, 'app/views'

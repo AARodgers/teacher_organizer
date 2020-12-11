@@ -3,7 +3,6 @@
 # Is the Sessions controller with login and logout methods.
 
 class SessionsController < ApplicationController
-
   # Sends message to user that they have successully signed in.
   get '/login' do
     @successful_signup = session[:successful_signup]
