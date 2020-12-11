@@ -3,24 +3,27 @@
 # Is the Standards controller with methods to add, edit and remove standards from User's homepage.
 
 class StandardsController < ApplicationController
+
+  # Directs current user to main homepage.
   get '/users/homepage' do
     @user = current_user
     @standards = @user.standards
     erb :'users/homepage'
   end
 
+  # Takes user to create a new standard form.
   get '/standards/new' do
-    if logged_in?
-      erb :'standards/create_standard'
-    else
+    unless logged_in?
       redirect to '/homepage'
+    else
+      erb :'standards/create_standard'
     end
   end
 
+  # Saves the input from the user for the new standards created via a form.
   post '/users/homepage' do
     unless logged_in?
-      flash 'Not logged in'
-      redirect_to '/'
+      redirect_to '/teachersapp'
       return
     end
 
@@ -42,6 +45,7 @@ class StandardsController < ApplicationController
     end
   end
 
+  #
   get '/standards/:id' do
     unless logged_in?
       redirect to '/users/homepage'

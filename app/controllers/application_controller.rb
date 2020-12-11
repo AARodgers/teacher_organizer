@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+# Is Application Controller with helper methods for logging in and out.
+
 class ApplicationController < Sinatra::Base
 
   configure do
@@ -13,12 +15,12 @@ class ApplicationController < Sinatra::Base
     end
   end
 
-  # If we don't know who the user is, find them by their session email
+  # If we don't know who the user is, find them by their session email.
   def current_user
     @current_user ||= User.find_by(email: session[:email]) if session[:email]
   end
 
-  # Log the user in if their email and passsword match
+  # Logs the user in if their email and passsword match.
   def login(email, password)
     user = User.find_by(email: email)
     if user&.authenticate(password)
@@ -28,7 +30,7 @@ class ApplicationController < Sinatra::Base
     end
   end
 
-  # Log the user out and redirect them back to website's homepage
+  # Logs the user out and redirects them back to website's homepage.
   def logout!
     session.clear
     redirect to '/teachersapp'
