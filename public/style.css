@@ -13,7 +13,12 @@ input[type="submit"] {
 
 input[type="text"] {
     padding: 4px 8px;
-    width: 500px;
+    width: 250px;
+}
+
+input[type="password"] {
+    padding: 4px 8px;
+    width: 220px;
 }
 
 .edit-page h1 {
