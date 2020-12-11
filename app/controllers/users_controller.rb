@@ -1,8 +1,8 @@
+require 'sinatra/base'
+require 'sinatra/flash'
 # frozen_string_literal: true
 
 # Is the Users controller with methods to sign user up and save their sign-in information.
-require 'sinatra/base'
-require 'sinatra/flash'
 
 class UsersController < ApplicationController
   register Sinatra::Flash
@@ -15,7 +15,7 @@ class UsersController < ApplicationController
     erb :'users/new'
   end
 
-  # Signs user up and directs them to their homepage
+  # Signs the user up and directs them to their homepage.
   post '/signup' do
     if params[:name] == '' || params[:email] == '' || params[:password] == ''
       redirect to '/signup'
@@ -27,7 +27,7 @@ class UsersController < ApplicationController
     end
   end
 
-  # Creates a new user
+  # Creates a new user.
   post '/users' do
     @user = User.new
     @user.name = params[:name]

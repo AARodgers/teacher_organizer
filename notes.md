@@ -159,6 +159,7 @@ To Do:
   - [ ] Install [Sinatra Flash](https://github.com/SFEley/sinatra-flash)
   - [ ] Add flash messages to the head of every template NEED TO DO THIS? GET RID OF FLASH AND USE SESSIONS?
   - [ ] Replace all `if logged_in?` checks with guard-style `unless logged_in? redirect; flash; return` checks
+  - [ ] get rid of flash stuff in user_controller
 - [ X] Document every model (one-line comments are fine)
 - [ x] Fix up styling - modernize style, colors, fonts
 - [ ] Re-record video with concise script
