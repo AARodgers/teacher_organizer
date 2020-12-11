@@ -1,7 +1,5 @@
 # frozen_string_literal: true
 
-# Is Application controller using inheriting from Sinatra with helper methods.
-
 class ApplicationController < Sinatra::Base
 
   configure do
