@@ -4,9 +4,10 @@
     <link href="<%= url('/style.css') %>" rel="stylesheet" type="text/css" />
   </header>
   <body>
-    <b><%= "Standard Title:" %></b><br><ul><li><%= @standard.title %></li></ul><br>
-    <b><%= "Standard Description:" %></b><br><ul><li><%= @standard.description %></li></ul><br>
-    <b><%= "Add Resources:" %></b><br>
+    <p style="font-size:25px"><b><%= "Standard Title:" %></p></b><ul><li><%= @standard.title %></li></ul><br>
+    <p style="font-size:25px"><b><%= "Standard Description:" %></p></b><ul><li><%= @standard.description %></li></ul><br>
+    <p style="font-size:25px"><b><%= "Add Resources:" %></p></b><br>
+
     <ul>
     <% @standard.resources.each do |resource| %>
         <ul><b><%= resource.title  %></b>
@@ -18,7 +19,7 @@
     </ul>
 
     <a href='/standards/<%= @standard.id %>/edit' class="spacious primary">Edit Standard</a><br><br>
-    <a href='/users/homepage' class="spacious primary">Return to Homepage</a><br><br>
+    <a href='/users/homepage' class="spacious primary">Return to Homepage</a><br><br><br>
 
     <form action='/logout' method='POST'>
         <button type="submit">Log Out</button>
