@@ -1,11 +1,8 @@
-require 'sinatra/base'
-require 'sinatra/flash'
 # frozen_string_literal: true
 
 # Is the Users controller with methods to sign user up and save their sign-in information.
 
 class UsersController < ApplicationController
-  register Sinatra::Flash
 
   get '/teachersapp' do
     erb :homepage
