@@ -1,11 +1,3 @@
-Application name
-- [ ] Description
-  - [ ] Link to YouTube walkthrough
-- [ ] Intent (who is this for? how will it help them?)
-- [ ] Getting Started (installation)
-- [ ] Usage
-- [ ] Contributing
-- [ ] License
 
 # teacher_organizer
 
