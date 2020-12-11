@@ -18,24 +18,25 @@
       <h3>Here are your Standards and Resources:</h3>
       <h3><a href="/standards/new" class="spacious primary">Add a Standard &raquo;</a><br><br>
 
-
-
       <ul>
       <% @standards.each do |standard|%>
         <li>
         <b><%= "Standard:" %></b><br><ul><li><%= standard.title %></li></ul><br>
         <b><%= "Description:" %></b><br><ul><li><%= standard.description %></li></ul><br>
         <b><%= "Resources:" %></b><br>
-          <% standard.resources.each do |resource| %>
+        <ul><% standard.resources.each do |resource| %>
           <ul>
-            <%= resource.title %>
-            <section id="resource_link2">
-              <a href="<%= resource.link %>" target="_blank"><%= resource.link %></a>
-            </section>
+          <li><%= resource.title + ":" %></li>
           </ul>
-          <% end %>
+          <section id="resource_link2">
+            <a href="<%= resource.link %>" target="_blank"><%= resource.link %></a>
+          </section>
+        <% end %>
+        </ul>
         </li><br>
-        <a href='/standards/<%= standard.id %>' class="button">Show Standard</a><br><br>
+        <nav>
+        <a href='/standards/<%= standard.id %>' class="spacious primary">Show Standard</a><br><br>
+        </nav>
       <% end %>
       </ul>
 

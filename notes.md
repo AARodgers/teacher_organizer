@@ -153,9 +153,11 @@ To Do:
 
 # teachers_app
  - [ ] Figure out how to not pre-populate homepage with previous user
- -[ ] how to not show password when putting it in
+- [ ] how to not show password when putting it in
+- [ ] why placeholder in signup email not working?
 - [ ] Audit every controller method
-  - [ ] Add a comment to every controller method
+- [ ] how to hide password when putting it in in login
+  - [ x] Add a comment to every controller method
   - [ ] Install [Sinatra Flash](https://github.com/SFEley/sinatra-flash)
   - [ ] Add flash messages to the head of every template NEED TO DO THIS? GET RID OF FLASH AND USE SESSIONS?
   - [ ] Replace all `if logged_in?` checks with guard-style `unless logged_in? redirect; flash; return` checks
