@@ -45,7 +45,7 @@ class StandardsController < ApplicationController
     end
   end
 
-  #
+  # Finds current standard and directs user to it's show page.
   get '/standards/:id' do
     unless logged_in?
       redirect to '/users/homepage'
@@ -55,6 +55,7 @@ class StandardsController < ApplicationController
     erb :'standards/show_standard'
   end
 
+  # Edits standard shown on show page.
   get '/standards/:id/edit' do
     unless logged_in?
       redirect '/homepage'
@@ -65,6 +66,7 @@ class StandardsController < ApplicationController
     erb :'standards/edit_standard'
   end
 
+  # Edits the standard selected.
   patch '/standards/:id' do
     unless logged_in?
       redirect '/homepage'
@@ -78,6 +80,7 @@ class StandardsController < ApplicationController
     redirect "/standards/#{@standard.id}"
   end
 
+  # Shows the newly edited standard.
   post '/standards/:id/resource' do
     unless logged_in?
       redirect '/users/homepage'
@@ -94,6 +97,7 @@ class StandardsController < ApplicationController
     redirect "/standards/#{@standard.id}"
   end
 
+  # Deletes the selected standard.
   delete '/standards/:id' do
     unless logged_in?
       redirect to '/homepage'
