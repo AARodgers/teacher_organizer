@@ -25,9 +25,7 @@
         <b><%= "Description:" %></b><br><ul><li><%= standard.description %></li></ul><br>
         <b><%= "Resources:" %></b><br>
         <ul><% standard.resources.each do |resource| %>
-
         <li><%= resource.title + ":" %></li>
-
         <section id="resource_link2">
         <li><a href="<%= resource.link %>" target="_blank"><%= resource.link %></a></li>
         </section>
