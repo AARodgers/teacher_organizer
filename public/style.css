@@ -2,7 +2,7 @@
     display: block;
 }
 
-#login input[type="text"] {
+#login input[type="text"], #login input[type="password"] {
     margin-bottom: 12px;
     width: 200px;
 }

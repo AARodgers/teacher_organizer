@@ -153,19 +153,19 @@ To Do:
  - [ ] Figure out how to not pre-populate homepage with previous user
 - [ ] how to not show password when putting it in
 - [ ] why placeholder in signup email not working?
-- [ ] Audit every controller method
+- [x ] Audit every controller method
 - [ ] how to hide password when putting it in in login
   - [ x] Add a comment to every controller method
   - [ ] Install [Sinatra Flash](https://github.com/SFEley/sinatra-flash)
   - [ ] Add flash messages to the head of every template NEED TO DO THIS? GET RID OF FLASH AND USE SESSIONS?
-  - [ ] Replace all `if logged_in?` checks with guard-style `unless logged_in? redirect; flash; return` checks
-  - [ ] get rid of flash stuff in user_controller
+  - [ x] Replace all `if logged_in?` checks with guard-style `unless logged_in? redirect; flash; return` checks
+  - [ x] get rid of flash stuff in user_controller
 - [ X] Document every model (one-line comments are fine)
 - [ x] Fix up styling - modernize style, colors, fonts
 - [ ] Re-record video with concise script
 
 # WIC Clinic Finder
-- [ ] Document your model class
+- [x ] Document your model class
 - [ ] Review your use of `system("clear")` and remove redundant calls
-- [ ] Get rid of all commented lines of code
-- [ ] Instead of printing every clinic's info, first print the list of clinics, ask the user to select one, and print that clinic's info
+- [x] Get rid of all commented lines of code
+- [ x] Instead of printing every clinic's info, first print the list of clinics, ask the user to select one, and print that clinic's info
