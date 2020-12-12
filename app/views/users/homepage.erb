@@ -18,37 +18,10 @@
       <a href="/standards/new" class="spacious primary">Add a Standard &raquo;</a><br><br>
 
       <ul>
-      <% @standards.each do |standard|%>
-        <li>
-          <p>
-            <b>Standard:</b>
-            <br>
-            <%= standard.title %>
-          </p>
-          <p>
-            <b>Description:</b>
-            <br>
-            <%= standard.description %>
-          </p>
-          <p>
-            <b>Resources:</b>
-            <br>
-            <ul>
-              <% standard.resources.each do |resource| %>
-                <li>
-                  <%= resource.title + ":" %>
-                  <a href="<%= resource.link %>" target="_blank"><%= resource.link %></a>
-                </li>
-                <br>
-              <% end %>
-            </ul>
-          </p>
-        </li>
-        <br>
-        <nav>
-          <a href='/standards/<%= standard.id %>' class="spacious primary">Show Standard</a><br><br>
-        </nav>
-      <% end %>
+        <% @standards.each do |standard| %>
+          <%= erb :'partials/standard', locals: { standard: standard } %>
+          <a href='/standards/<%= standard.id %>' class="spacious primary">Show Standard</a>
+        <% end %>
       </ul>
 
       <form action='/logout' method='POST'>

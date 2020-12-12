@@ -4,22 +4,14 @@
     <link href="<%= url('/style.css') %>" rel="stylesheet" type="text/css" />
   </header>
   <body>
-    <p style="font-size:25px"><b>Standard Title:</p></b><ul><li><%= @standard.title %></li></ul>
-    <p style="font-size:25px"><b>Standard Description:</p></b><ul><li><%= @standard.description %></li></ul>
-    <p style="font-size:25px"><b>Resources:</p></b>
     <ul>
-    <% @standard.resources.each do |resource| %>
-    <li><%= resource.title + ":"  %></b></li>
-    <section id="resource_link">
-    <li><a href="<%= resource.link %>" target="_blank"><%= resource.link %></a></li>
-    </section>
-    <% end %>
-    </ul><br>
-
+      <%= erb :'partials/standard', locals: { standard: @standard } %>
+    </ul>
     <a href='/standards/<%= @standard.id %>/edit' class="spacious primary">Edit Standard</a><br><br>
     <a href='/users/homepage' class="spacious primary">Return to Homepage</a><br><br><br>
 
     <form action='/logout' method='POST'>
-        <button type="submit">Log Out</button>
+      <button type="submit">Log Out</button>
+    </form>
   </body>
 </html>

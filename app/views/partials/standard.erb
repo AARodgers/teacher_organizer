@@ -1,0 +1,26 @@
+<li>
+  <p>
+    <b>Standard:</b>
+    <br>
+    <%= standard.title %>
+  </p>
+  <p>
+    <b>Description:</b>
+    <br>
+    <%= standard.description %>
+  </p>
+  <p>
+    <b>Resources:</b>
+    <br>
+    <ul>
+      <% standard.resources.each do |resource| %>
+        <li>
+          <%= resource.title + ":" %>
+          <a href="<%= resource.link %>" target="_blank"><%= resource.link %></a>
+        </li>
+        <br>
+      <% end %>
+    </ul>
+  </p>
+</li>
+
