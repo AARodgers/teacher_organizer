@@ -34,4 +34,22 @@ class ApplicationController < Sinatra::Base
     session.clear
     redirect to '/teachersapp'
   end
+
+  # Save a message to show the user.
+  # e.g. `flash "You have logged in!"`
+  def flash(msg)
+    session[:flash] = msg
+  end
+
+  # Check if there are any messages waiting.
+  def flash_waiting?
+    session[:flash]
+  end
+
+  # Retrieve the message for the user and clear it.
+  def read_flash
+    msg = session[:flash]
+    session[:flash] = nil
+    msg
+  end
 end

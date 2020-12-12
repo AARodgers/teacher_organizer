@@ -131,14 +131,14 @@ To Do:
 - [ ] Write README
 - [x ] Add LICENSE file
 - [ x] Make sure license appears in About section properly
-- [ ] Clean repo of unused/useless/incorrect files
+- [ x] Clean repo of unused/useless/incorrect files
 - [ ] Lint all files with [RuboCop](https://rubocop.org/)
   - [ ] Fix all discovered issues with `rubocop --fix` and manual intervention
   - [ ] Commit all fixes
 - [ ] Run application from scratch, using the instructions from your README verbatim
   - [ ] Correct any issues with your README Getting Started section
-- [ ] Document all major methods with comments
-- [ ] Get rid of any TODO comments left lying around
+- [x ] Document all major methods with comments
+- [ x] Get rid of any TODO comments left lying around
 
 # README for each repo
 - [ ] Application name
@@ -150,11 +150,11 @@ To Do:
 - [ ] Contributing
 - [ ] License
 # teachers_app
- - [ ] Figure out how to not pre-populate homepage with previous user
-- [ ] how to not show password when putting it in
-- [ ] why placeholder in signup email not working?
+ - [ x] Figure out how to not pre-populate homepage with previous user
+- [ x] how to not show password when putting it in
+- [ x] why placeholder in signup email not working?
 - [x ] Audit every controller method
-- [ ] how to hide password when putting it in in login
+- [x ] how to hide password when putting it in in login
   - [ x] Add a comment to every controller method
   - [ ] Install [Sinatra Flash](https://github.com/SFEley/sinatra-flash)
   - [ ] Add flash messages to the head of every template NEED TO DO THIS? GET RID OF FLASH AND USE SESSIONS?
