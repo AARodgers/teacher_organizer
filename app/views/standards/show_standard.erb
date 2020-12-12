@@ -4,9 +4,9 @@
     <link href="<%= url('/style.css') %>" rel="stylesheet" type="text/css" />
   </header>
   <body>
-    <p style="font-size:25px"><b><%= "Standard Title:" %></p></b><ul><li><%= @standard.title %></li></ul>
-    <p style="font-size:25px"><b><%= "Standard Description:" %></p></b><ul><li><%= @standard.description %></li></ul>
-    <p style="font-size:25px"><b><%= "Add Resources:" %></p></b>
+    <p style="font-size:25px"><b>Standard Title:</p></b><ul><li><%= @standard.title %></li></ul>
+    <p style="font-size:25px"><b>Standard Description:</p></b><ul><li><%= @standard.description %></li></ul>
+    <p style="font-size:25px"><b>Resources:</p></b>
     <ul>
     <% @standard.resources.each do |resource| %>
     <li><%= resource.title + ":"  %></b></li>

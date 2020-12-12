@@ -15,25 +15,38 @@
 
   <section id="standards">
     <div>
-      <h3>Here are your Standards and Resources:</h3>
-      <h3><a href="/standards/new" class="spacious primary">Add a Standard &raquo;</a><br><br>
+      <a href="/standards/new" class="spacious primary">Add a Standard &raquo;</a><br><br>
 
       <ul>
       <% @standards.each do |standard|%>
         <li>
-        <b><%= "Standard:" %></b><br><ul><li><%= standard.title %></li></ul><br>
-        <b><%= "Description:" %></b><br><ul><li><%= standard.description %></li></ul><br>
-        <b><%= "Resources:" %></b><br>
-        <ul><% standard.resources.each do |resource| %>
-        <li><%= resource.title + ":" %></li>
-        <section id="resource_link2">
-        <li><a href="<%= resource.link %>" target="_blank"><%= resource.link %></a></li>
-        </section>
-        <% end %>
-        </ul>
-        </li><br>
+          <p>
+            <b>Standard:</b>
+            <br>
+            <%= standard.title %>
+          </p>
+          <p>
+            <b>Description:</b>
+            <br>
+            <%= standard.description %>
+          </p>
+          <p>
+            <b>Resources:</b>
+            <br>
+            <ul>
+              <% standard.resources.each do |resource| %>
+                <li>
+                  <%= resource.title + ":" %>
+                  <a href="<%= resource.link %>" target="_blank"><%= resource.link %></a>
+                </li>
+                <br>
+              <% end %>
+            </ul>
+          </p>
+        </li>
+        <br>
         <nav>
-        <a href='/standards/<%= standard.id %>' class="spacious primary">Show Standard</a><br><br>
+          <a href='/standards/<%= standard.id %>' class="spacious primary">Show Standard</a><br><br>
         </nav>
       <% end %>
       </ul>
