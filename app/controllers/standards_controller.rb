@@ -79,7 +79,14 @@ class StandardsController < ApplicationController
     @standard.title = params[:title]
     @standard.description = params[:description]
     @standard.save!
-    redirect "/standards/#{@standard.id}"
+    if params[:title] == '' && params[:description] == ''
+      flash "Please add a new title or description!"
+      erb :'standards/edit_standard'
+    else
+      flash "You have successfully edited this standard!"
+      redirect "/standards/#{@standard.id}"
+    end
+    # redirect "/standards/#{@standard.id}"
   end
 
   # Shows the newly edited standard.
@@ -103,12 +110,6 @@ class StandardsController < ApplicationController
       redirect "/standards/#{@standard.id}"
     end
   end
-  # if @user.save
-  #   flash "You have sucessfully created an account!"
-  #   redirect '/login'
-  # else
-  #   flash "You must provide a name, email, and password."
-  #   erb :'users/new'
 
   # Deletes the selected standard.
   delete '/standards/:id' do
