@@ -6,6 +6,13 @@
 
 
 <body id="user_homepage">
+
+  <% if flash_waiting? %>
+    <div class="flash">
+      <%= read_flash %>
+    </div>
+  <% end %>
+  
   <section>
     <div>
     <h1 id="welcome">Welcome to the Teacher Organizer!</h1>
