@@ -5,6 +5,12 @@
 </header>
 
 <body>
+    <% if flash_waiting? %>
+    <div class="flash">
+      <%= read_flash %>
+    </div>
+    <% end %>
+
   <h1>Add Your New Standard Below:</h1>
   <form action='/users/homepage' method='POST'>
       <p>Standard Title:</p>

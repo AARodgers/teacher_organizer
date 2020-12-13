@@ -36,6 +36,7 @@ class StandardsController < ApplicationController
           users: [current_user]
         )
         if @standard.save
+          flash "You have created a new standard. Now you can add resources to it by clicking Show Standard!"
           redirect to '/users/homepage'
         else
           redirect to '/standards/new'
@@ -51,6 +52,7 @@ class StandardsController < ApplicationController
       return
     end
     @standard = Standard.find_by_id(params[:id])
+    # flash "Add a teaching resource or change this standards title or description by clicking Edit Standard below."
     erb :'standards/show_standard'
   end
 
@@ -62,6 +64,7 @@ class StandardsController < ApplicationController
     end
 
     @standard = Standard.find_by_id(params[:id])
+    flash "Edit your standard title and description, add a new resource or delete your standard below."
     erb :'standards/edit_standard'
   end
 
@@ -92,9 +95,20 @@ class StandardsController < ApplicationController
     @resource.link = params[:link]
     @resource.standards = [@standard]
     @resource.save!
-
-    redirect "/standards/#{@standard.id}"
+    if @resource.save!
+      flash "You have succesfully added a resource."
+      redirect "/standards/#{@standard.id}"
+    else
+      flash "Please add a title and link. Then, click Save to add a resource."
+      redirect "/standards/#{@standard.id}"
+    end
   end
+  # if @user.save
+  #   flash "You have sucessfully created an account!"
+  #   redirect '/login'
+  # else
+  #   flash "You must provide a name, email, and password."
+  #   erb :'users/new'
 
   # Deletes the selected standard.
   delete '/standards/:id' do

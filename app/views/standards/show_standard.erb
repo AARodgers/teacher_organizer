@@ -4,6 +4,12 @@
     <link href="<%= url('/style.css') %>" rel="stylesheet" type="text/css" />
   </header>
   <body>
+    <% if flash_waiting? %>
+    <div class="flash">
+      <%= read_flash %>
+    </div>
+    <% end %>
+
     <ul>
       <%= erb :'partials/standard', locals: { standard: @standard } %>
     </ul>
@@ -11,7 +17,7 @@
     <a href='/users/homepage' class="spacious primary">Return to Homepage</a><br><br><br>
 
     <form action='/logout' method='POST'>
-      <button type="submit">Log Out</button>
+    <button type="submit">Log Out</button>
     </form>
   </body>
 </html>

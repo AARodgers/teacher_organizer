@@ -5,6 +5,12 @@
 </header>
 
 <body class="edit-page">
+    <% if flash_waiting? %>
+    <div class="flash">
+      <%= read_flash %>
+    </div>
+    <% end %>
+
   <h1>Edit Standard:</h1>
 
   <form method='POST' action='/standards/<%= @standard.id %>'>
