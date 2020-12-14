@@ -52,7 +52,6 @@ class StandardsController < ApplicationController
       return
     end
     @standard = Standard.find_by_id(params[:id])
-    flash "Add a teaching resource or change this standard's title or description by clicking 'Edit Standard' below."
     erb :'standards/show_standard'
   end
 
@@ -119,6 +118,9 @@ class StandardsController < ApplicationController
 
     @standard = Standard.find_by_id(params[:id])
     @standard.delete
+    if @standard.delete
+      flash "You have deleted a standard."
+    end
     redirect '/users/homepage'
   end
 end
