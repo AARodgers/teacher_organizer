@@ -1,4 +1,9 @@
 <li>
+  <% if flash_waiting? %>
+  <div class="flash">
+    <%= read_flash %>
+  </div>
+  <% end %>
   <p>
     <b>Standard:</b>
     <br>
@@ -23,4 +28,3 @@
     </ul>
   </p>
 </li>
-

@@ -36,7 +36,7 @@ class StandardsController < ApplicationController
           users: [current_user]
         )
         if @standard.save
-          flash "You have created a new standard. Now you can add resources to it by clicking Show Standard!"
+          flash "You have created a new standard. Now you can add resources to it by clicking 'Show Standard'!"
           redirect to '/users/homepage'
         else
           redirect to '/standards/new'
@@ -52,7 +52,7 @@ class StandardsController < ApplicationController
       return
     end
     @standard = Standard.find_by_id(params[:id])
-    # flash "Add a teaching resource or change this standards title or description by clicking Edit Standard below."
+    flash "Add a teaching resource or change this standard's title or description by clicking 'Edit Standard' below."
     erb :'standards/show_standard'
   end
 
@@ -86,7 +86,6 @@ class StandardsController < ApplicationController
       flash "You have successfully edited this standard!"
       redirect "/standards/#{@standard.id}"
     end
-    # redirect "/standards/#{@standard.id}"
   end
 
   # Shows the newly edited standard.
