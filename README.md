@@ -3,8 +3,8 @@
 
 <!-- Watch this video to see how it works:  -->
 
-![User's Homepage](images/users_homepage.png =250x250)
-![Edit Standard](images/edit_standard.png)
+![User's Homepage](images/users_homepage.png)
+![Edit Standard](images/edit_standard.png =200x200)
 
 # Description
 
