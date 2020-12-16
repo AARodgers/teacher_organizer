@@ -4,6 +4,7 @@
 <!-- Watch this video to see how it works:  -->
 
 <img width="400px" alt="User's Homepage" src="images/users_homepage.png">
+<img width="400px" alt="Edit Standard" src="images/edit_standard.png">
 
 
 # Description
