@@ -4,7 +4,7 @@
 <!-- Watch this video to see how it works:  -->
 
 ![User's Homepage](images/users_homepage.png)
-![Edit Standard](images/edit_standard.png =200x200)
+
 
 # Description
 
