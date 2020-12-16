@@ -3,7 +3,7 @@
 
 <!-- Watch this video to see how it works:  -->
 
-![User's Homepage](images/users_homepage.png)
+![User's Homepage](images/users_homepage.png =200x200)
 
 
 # Description
