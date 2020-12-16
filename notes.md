@@ -1,3 +1,30 @@
+For video:
+
+Trial:
+name: Victoria
+email: victoria@highschool.edu
+password: chemistry
+
+Add a Standard:
+title: "The difference between entropy and enthalpy (SC09-GR.HS-S.1-GLE.6-EO.a,b; IQ.3)",
+description: "Students should be able to define entropy and enthalpy and give examples of each"
+
+Show Standard
+Edit Standard to add a Resource
+
+Resource:
+title: "Video about enthalpy:"
+link: "https://www.khanacademy.org/science/ap-chemistry/thermodynamics-ap/enthalpy-tutorial-ap/v/enthalpy"
+
+Return to Homepage
+Click on video
+
+Show Standard to Edit it
+(change give example to explain to their neighbor the difference)
+(can add as many resources as you want to a standard)
+(also have option to delete Standard if no longer need it)
+
+
 
 =======================================
 Seed Data Notes:
@@ -153,7 +180,7 @@ To Do:
 
 # teachers_app
 - [ ] if sign up with same name, email and password as someone else and then signin as that
-email and password, you enter their account and not your new one? 
+email and password, you enter their account and not your new one?
  - [ x] Figure out how to not pre-populate homepage with previous user
 - [ x] how to not show password when putting it in
 - [ x] why placeholder in signup email not working?

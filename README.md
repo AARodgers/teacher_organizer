@@ -1,7 +1,10 @@
 
 # Teacher Organizer
 
-Watch this video to see how it works: https://www.youtube.com/watch?v=bXWTeDUA78E&feature=youtu.be
+<!-- Watch this video to see how it works:  -->
+
+![User's Homepage](images/users_homepage.png)
+![Edit Standard](images/edit_standard.png)
 
 # Description
 
