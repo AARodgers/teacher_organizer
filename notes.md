@@ -149,15 +149,20 @@ To Do:
 - [ ] Usage
 - [ ] Contributing
 - [ ] License
+
+
 # teachers_app
+- [ ] if sign up with same name, email and password as someone else and then signin as that
+email and password, you enter their account and not your new one? 
  - [ x] Figure out how to not pre-populate homepage with previous user
 - [ x] how to not show password when putting it in
 - [ x] why placeholder in signup email not working?
 - [x ] Audit every controller method
 - [x ] how to hide password when putting it in in login
   - [ x] Add a comment to every controller method
-  - [ ] Install [Sinatra Flash](https://github.com/SFEley/sinatra-flash)
+  - [ x] Install [Sinatra Flash](https://github.com/SFEley/sinatra-flash)
   - [ ] Add flash messages to the head of every template NEED TO DO THIS? GET RID OF FLASH AND USE SESSIONS?
+  - [ ] how do i add a logout flash msg?
   - [ x] Replace all `if logged_in?` checks with guard-style `unless logged_in? redirect; flash; return` checks
   - [ x] get rid of flash stuff in user_controller
 - [ X] Document every model (one-line comments are fine)
@@ -166,6 +171,6 @@ To Do:
 
 # WIC Clinic Finder
 - [x ] Document your model class
-- [ ] Review your use of `system("clear")` and remove redundant calls
+- [ x] Review your use of `system("clear")` and remove redundant calls
 - [x] Get rid of all commented lines of code
 - [ x] Instead of printing every clinic's info, first print the list of clinics, ask the user to select one, and print that clinic's info

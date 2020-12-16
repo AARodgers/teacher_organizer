@@ -1,5 +1,5 @@
 
-# teacher_organizer
+# Teacher Organizer
 
 Watch this video to see how it works: https://www.youtube.com/watch?v=bXWTeDUA78E&feature=youtu.be
 
@@ -12,27 +12,36 @@ Once a standard is created, the teacher can add resources under each standard by
 # Intent
 This project is designed to help teachers keep track of the state mandated educational standards that they are required to teach throughout the school year. It allows them to organize the resources that they use to teach each standard.
 
-# Getting Started
-Installation
+# Installation
 
 Clone this project locally:
 
-`git clone https://github.com/AARodgers/teachers_app.git`
+```bash
+git clone https://github.com/AARodgers/teacher_organizer.git
+cd teacher_organizer
+```
 
-Install the dependencies
+Install the dependencies:
 
-`bundle install`
+```bash
+bundle install
+```
 
-Create and seed the sqlite database
+Create and seed the SQLite database:
 
-`rake db:setup`
-
-Start the server
-
-`shotgun`
+```bash
+rake db:setup
+```
 
 # Usage
-Start the server with `shotgun`. Go to http://localhost:9393/teachersapp to see the application in your browser.
+
+Start the server:
+
+```bash
+shotgun
+```
+
+Go to http://localhost:9393/teachersapp to see the application in your browser.
 
 # Contributing
 I accept pull requests from people that want to improve upon this app or add features. Open an issue or a pull request and I'll be happy to discuss adding your code.

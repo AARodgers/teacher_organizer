@@ -25,6 +25,7 @@ class ApplicationController < Sinatra::Base
     if user&.authenticate(password)
       session[:email] = user.email
     else
+      flash "Username and password did not match."
       redirect '/login'
     end
   end

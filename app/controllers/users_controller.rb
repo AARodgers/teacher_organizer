@@ -4,7 +4,7 @@
 
 class UsersController < ApplicationController
   get '/teachersapp' do
-    erb :homepage
+      erb :homepage
   end
 
   get '/signup' do

@@ -100,11 +100,11 @@ class StandardsController < ApplicationController
     @resource.link = params[:link]
     @resource.standards = [@standard]
     @resource.save!
-    if @resource.save!
-      flash "You have succesfully added a resource."
-      redirect "/standards/#{@standard.id}"
-    else
-      flash "Please add a title and link. Then, click Save to add a resource."
+    if params[:title] == ' ' || params[:link] == ' '
+      flash  "Please add a title and link. Then, click Save to add a resource."
+      erb :'standards/edit_standard'
+    elsif @resource.save!
+      flash "You have successfully added a new resource."
       redirect "/standards/#{@standard.id}"
     end
   end
