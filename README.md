@@ -1,7 +1,7 @@
 
 # Teacher Organizer
 
-<!-- Watch this video to see how it works:  -->
+Watch this video to see how it works: https://youtu.be/_5N0F8Q-dSA
 
 <img width="400px" alt="User's Homepage" src="images/users_homepage.png">
 <img width="400px" alt="Edit Standard" src="images/edit_standard.png">
